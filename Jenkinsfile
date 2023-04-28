@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('romaxa09-dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('romashka123-dockerhub')
     }
     stages {
         stage('Docker version') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t roman/html:latest .'
+                sh 'docker build -t romaashka123/html:latest .'
             }
         }
         stage('Login') {
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Push'){
             steps{
-                sh 'docker push roman/html:latest'
+                sh 'docker push romashka123/html:latest'
             }
         }
     }
